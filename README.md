@@ -4,6 +4,7 @@
 - ejs 页面渲染
 - favicon 标识
 - express-session session
+- mongoose mongodb
 
 
 ** 功能 **

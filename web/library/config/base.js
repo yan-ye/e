@@ -1,5 +1,5 @@
-var lang_replay = require('./util/lang').lang_reply;
-var contributes = require('./contributes');
+var lang_replay = require('../util/lang').lang_reply;
+var contributes = require('../contributes');
 
 global.$CONFIG = {
     web_type : '',

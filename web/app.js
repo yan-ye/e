@@ -1,4 +1,4 @@
-require('./library/base');
+require('./library/config');
 const localeService = require('./library/services/locale');
 const path = require('path');
 const argv = require('minimist')(process.argv.slice(2));
