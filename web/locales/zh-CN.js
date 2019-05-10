@@ -48,8 +48,20 @@ $CONFIG.text_language["zh-CN"] = {
     "HAVE_PRODUCTS": "找到 {0} 个",
     "DEVELOPER": "开发者",
     "POPULAR_GAMES_IN_LAST_HOURS": "{0} 小时热门游戏",
-    "POPULAR_APPS_IN_LAST_HOURS": "{0} 小时热门应用"
-}
+    "POPULAR_APPS_IN_LAST_HOURS": "{0} 小时热门应用",
+    "meta": {
+        "Index": {
+            "title": "中文 - title",
+            "keywords": "中文 - keywords",
+            "description": "中文 - description"
+        },
+        "Login": {
+            "title": "用户登录",
+            "keywords": "登录，新用户，账户",
+            "description": "在讨论组发帖或评星前，请先登录你的账户。今天就加入吧！"
+        },
+    }
+};
 
 $CONFIG.support_template_language["cn"] = "cn";
 $CONFIG.support_template_language["zh-CN"] = "cn";

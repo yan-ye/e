@@ -54,7 +54,16 @@ exports.index = function (req, res, next) {
                 return $CONFIG.text_language[tl][key]
             }
             return String.prototype.format.apply($CONFIG.text_language[tl][key], Array.prototype.slice.call(arguments, 1));
-        }
+        };
+        o.$GET_META = o.$_$.$GET_META = function (key, meta_type) {
+            if (arguments.length == 2) {
+                return $CONFIG.text_language[tl]['meta'][key][meta_type];
+            }
+            return String.prototype.format.apply(
+                $CONFIG.text_language[tl]['meta'][key][meta_type],
+                Array.prototype.slice.call(arguments, 2)
+            );
+        };
 
     })(res.locals,tl);
     next();

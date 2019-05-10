@@ -48,8 +48,20 @@ $CONFIG.text_language["en"] = {
     "HAVE_PRODUCTS": "All {0} Apps",
     "DEVELOPER": "Developer",
     "POPULAR_GAMES_IN_LAST_HOURS": "Popular Games In Last {0} Hours",
-    "POPULAR_APPS_IN_LAST_HOURS": "Popular Apps In Last {0} Hours"
-}
+    "POPULAR_APPS_IN_LAST_HOURS": "Popular Apps In Last {0} Hours",
+    "meta": {
+        "Index": {
+            "title": "English - title",
+            "keywords": "English - keywords",
+            "description": "English - description"
+        },
+        "Login": {
+            "title": "users login",
+            "keywords": "Login, new user, account",
+            "description": "Please log in to your account to join the discussion group today before Posting or commenting"
+        },
+    }
+};
 
 $CONFIG.support_template_language["en"] = "en";
 $CONFIG.support_template_language["en-AG"] = "en";

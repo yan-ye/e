@@ -7,3 +7,7 @@ mongoose.connect($CONFIG.db.mongodb.uri,{useNewUrlParser: true},function (err) {
     }
 
 });
+
+require('./user_oauth');
+
+exports.user_oauth = mongoose.model('user_oauth');

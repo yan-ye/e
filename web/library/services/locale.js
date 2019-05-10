@@ -7,7 +7,7 @@ exports.loadLang = function () {
     $CONFIG.text_language = {};
     var langPath = path.join(__dirname,'../../locales');
     fs.readdirSync(langPath).filter(function (t) {
-        console.error(t,">>>>")
+        console.error(t,">>>>");
         if(/^\.*/.test(t) && t.lastIndexOf('.js') !== -1){
             return true
         }

@@ -23,7 +23,7 @@ require('./routes')(app);//路由
 
 app.use(function (err, req, res, next) {
     let status = err.status || err.statusCode;
-    console.log(err)
+    console.log(err);
     if(typeof status === "number" && status >= 500){
         res.status(status).render('404')
     }

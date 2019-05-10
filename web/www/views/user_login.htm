@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head><%var htmlTitle = $GET_META('Login','title');%>
+    <%- include inc/tmp_meta.htm%>
+    <title><%= htmlTitle%></title>
+    <style>
+        .cmt-top-bg {
+            background: #49ca88;
+            background-image: linear-gradient(90deg, #49ca88 0%, #a3c259 100%);
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding-bottom: 110px;
+            background-attachment: fixed;
+            min-height: 360px !important;
+            position: relative;
+        }
+        .cmt-top-rounded {
+            position: absolute;
+            margin-top: -100px;
+            z-index: 9;
+            overflow: hidden;
+        }
+        .cmt-top-rounded path{
+            fill: #fff;
+            stroke: #fff;
+        }
+        .cmt-popup {
+            z-index: 99;
+            padding: 30px;
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+            position: relative;
+            background: #FFF;
+            width: auto;
+            max-width: 400px;
+            margin: -370px auto 50px;
+            border-radius: 4px;
+        }
+        .cmt-popup-pad {
+            padding: 16px;
+        }
+        .cmt-popup-center {
+            text-align: center;
+        }
+        .cmt-popup .input {
+            position: relative;
+            padding: 20px 0;
+        }
+        input, button, select, textarea {
+            outline: none;
+        }
+        .cmt-popup .input>input:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px white inset;
+        }
+        .cmt-popup .input>input {
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,0.12);
+            padding: 4px 0 4px 35px;
+            width: 100%;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+
+        .cmt-popup form .cmt-auth-submit {
+            width: 100%;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .cmt-auth-submit {
+            color: #fff;
+            background: #24cd77;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .cmt-pass-wrap {
+            text-align: right;
+            margin-top: 5px;
+        }
+        .cmt-pass-wrap a {
+            color: #949494;
+            font-size: 13px;
+        }
+        .cmt-to-register {
+            color: #fa8b15;
+        }
+        .cmt-to-register, .cmt-to-guest {
+            height: 33px;
+            margin: 0;
+            min-width: 64px;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 33px;
+            display: inline-block;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        .cmt-popup .cmt-third {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding: 16px 0;
+        }
+        .cmt-auth-third-menu {
+            padding-left: 50%;
+            margin-left: -90px;
+            float: left;
+        }
+        .cmt-auth-third-menu li {
+            margin: 0 7.5px;
+            float: left;
+            list-style-type:none;
+        }
+        .cmt-auth-facebook a {
+            background-position: 0 0;
+        }
+        .cmt-auth-google a {
+            background-position: 0 -90px;
+        }
+        .cmt-auth-twitter a {
+            background-position: 0 -45px;
+        }
+        .cmt-auth-facebook a, .cmt-auth-google a, .cmt-auth-twitter a {
+            background-image: url('/imgs/user_v1.png');
+            width: 45px;
+            height: 45px;
+            display: block;
+        }
+        .clear {
+            clear: both;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<%- include inc/nav.htm%>
+<div class="cmt-top-bg"></div>
+<svg class="cmt-top-rounded" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="50 20 50 80" preserveAspectRatio="none">
+    <path d="M0,100 C15,100 35,50 50,50 L50,50 C65,50 85,100 100,100 Z"></path>
+</svg>
+<div class="cmt-popup">
+    <form id="cmt-login-form" action="/user/login" onsubmit="return false">
+        <div class="cmt-popup-pad">
+            <h4>用户登录</h4>
+        </div>
+        <div class="cmt-popup-pad">
+            <div class="input">
+                <input type="text" name="account" placeholder="用户名" required="">
+                <span class="cmt-input-bd"></span>
+                <span class="cmt-input-bd-err"></span>
+                <i class="iconfont icon-account"></i>
+            </div>
+            <div class="input">
+                <input type="password" name="password" placeholder="密码" required="">
+                <span class="cmt-input-bd"></span>
+                <span class="cmt-input-bd-err"></span>
+                <i class="iconfont icon-password"></i>
+            </div>
+
+        </div>
+        <div class="cmt-popup-error"></div>
+        <div class="cmt-popup-pad">
+            <button type="submit" class="cmt-btn cmt-auth-submit">登录</button>
+            <div class="cmt-pass-wrap">
+                <a href="/cn/account/password-recovery" rel="nofollow">找回密码</a>
+            </div>
+        </div>
+
+        <div class="cmt-popup-pad cmt-popup-center">
+            <a class="cmt-to-register" href="/cn/register">新用户注册</a>
+        </div>
+        <br>
+        <div class="cmt-third">
+            <ul class="cmt-auth-third-menu">
+                <li class="cmt-auth-facebook">
+                    <a href="javascript:void(0)" data-social="github"></a>
+                </li>
+                <li class="cmt-auth-google">
+                    <a href="javascript:void(0)" data-social="github"></a>
+                </li>
+                <li class="cmt-auth-twitter">
+                    <a href="javascript:void(0)" data-social="github"></a>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </form>
+    <div class="cmt-popup-loading">
+        <div class="cssload-spin-box"></div>
+    </div>
+</div>
+</body>
+<script src="/js/jquery-3.3.1.slim.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script>
+    $$.initLoginRegister('<%-$CONFIG.dev_url%>');
+</script>
+</html>
