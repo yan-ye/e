@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--    <%var htmlTitle = $GET_META('Index','title');%>-->
+    <title><%= typeof title != 'undefined' ? title : 'index'%></title>
+    <%- include inc/tmp_meta.htm%>
+</head>
+<body>
+<div class="layout">
+    <% var nav_type = 'byrs'%>
+    <%- include inc/nav.htm%>
+    <%- include inc/base_info_left_1.htm%>
+    <%- include inc/article.htm%>
+    <%- include inc/footer.htm%>
+</div>
+</body>
+<%- include inc/mustjs.htm%>
+<script>
+    $$.initSwiper();
+</script>
+</html>

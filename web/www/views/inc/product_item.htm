@@ -1,0 +1,70 @@
+<style>
+    .product_item_box {
+
+    }
+    .title-wrap {
+        padding: 0 16px;
+        height: 30px;
+        background: #fbfbfb;
+        border-bottom: 1px solid #e8e8e8;
+        line-height: 30px;
+    }
+    .product-list-div .wrap {
+        height: 169px;
+        border: 1px solid #c6d0c6ee;
+        border-top: 0;
+        padding: 25px;
+    }
+    .product-list-div .wrap .bg {
+        width: 40%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .product-list-div .wrap .pt-details{
+        width: 60%;
+        height: 100%;
+    }
+    .wrap .pt-details ul {
+        height: 100%;
+        padding-left: 50px;
+        font-size: 14px;
+        color: #675e5e;
+        text-decoration: none;
+    }
+    .wrap .pt-details ul li{
+        line-height: 28px;
+    }
+</style>
+<div class="product_item_box" style="padding-top: 8px">
+    <% var product_arr = [{img:'banner_2.jpg', url: '/',type:'肠胃类' ,features: [
+    {title:'药品症状', value:'xxxxx'},
+    {title:'药品别名', value:'xxxxx'},
+    {title:'性 状', value:'xxxxx'},
+    {title:'适应症', value:'xxxxx'}
+    ]}]%>
+    <% product_arr.forEach(function(item){%>
+    <div class="product-list-div">
+        <div class="title-wrap">
+            <span>
+                <span style="position: relative;top: -2px;font-size: 16px;font-weight: 700;color: #f1834d;">></span>
+                <span><%= item.type%></span>
+            </span>
+            <span class="right" style="line-height: 30px;"> <a href="javascript:void(0)">更多 <span style="position: relative;top: -2px;">>></span></a> </span>
+        </div>
+        <div class="wrap">
+            <div class="left bg" style="background-image: url('/imgs/<%= item.img%>');"></div>
+            <div class="right pt-details">
+               <ul>
+                   <% item.features.forEach(function(features_item){%>
+                   <li><%= features_item.title%>：<%= features_item.value%></li>
+                   <%})%>
+               </ul>
+            </div>
+        </div>
+
+    </div>
+    <%})%>
+
+</div>

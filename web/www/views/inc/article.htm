@@ -1,0 +1,17 @@
+<div class="article-box">
+    <%if(typeof(article)!=="undefined"){%>
+    <div class="article-title-wrap">
+        <span class="title"><%= article.article.title%></span>
+    </div>
+    <%if($$.__.isArray(article.article.imgs) && article.article.imgs.length > 0){%>
+    <%article.article.imgs.forEach(function(){%>
+    <img height="200px" src="/imgs/<%= article.article.imgs[0]%>">
+    <%})%>
+    <%}%>
+    <div class="article-msg">
+        <%= article.article.msg%>
+    </div>
+    <%}else{%>
+    <p>此栏目暂无任何新增信息</p>
+    <%}%>
+</div>

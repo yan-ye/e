@@ -7,7 +7,7 @@ app.engine('.htm', require('ejs').renderFile); // 发动机 htm
 app.set('views', path.join(__dirname, 'views')); //语言程序的视图目录或者数组目录
 app.set('view engine', '.htm'); //引擎扩展
 app.use(favicon(path.join(__dirname, 'public', 'favicon.jpg')));// 网站图标
-app.use(express.static(path.join(__dirname, 'public'), {maxAge: '7 days'}));
+app.use(express.static(path.join(__dirname, 'public'))); //{maxAge: '7 days'}
 app.use(session({
     secret: 'yan',
     resave: false,
@@ -38,7 +38,7 @@ exports.start = function (www_port) {
     server = app.listen(www_port,function () {
         var host = server.address().address;
         var port = server.address().port;
-        console.log('http://localhost:1900', host, port);
+        console.log(`地址:`,`http://localhost:${port}`);
     })
 };
 

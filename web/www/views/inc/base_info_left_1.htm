@@ -1,0 +1,53 @@
+<div class="product-box">
+    <%var img_arr = [[{img:'pro1.jpg', title:'修正牌优尔胶囊'}, {img:'pro2.jpg', title:'酸奶明胶软糖'}],[{img:'main1.jpg', title:'修正日化事业部傅家胜'}, {img:'main2.jpg', title:'修正保健品公司黑龙江省办双鸭'}],[{img:'banner1.jpg', title:'爱心在行动'}, {img:'banner2.jpg', title:'2222'}],,[{img:'pro1.jpg', title:'集团'}, {img:'pro2.jpg', title:'党员'}]]%>
+    <div class="product-list-wrap left custom-bottom-type" style="width: 272px">
+        <div class="product-details" style="height: 198px;">
+            <div class="product-details-title">
+                <span class="title-left-bg">领航修正</span>
+            </div>
+            <div class="lhjt">
+                <div class="left lhjt-left">
+                    <a href="/article/cmd-aaa">
+                        <img width="102" height="150" border="0" src="/imgs/news/news6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="left lhjt-right">
+                    <table>
+                        <tbpdy>
+                            <tr>
+                                <td> 中 文 名 :</td>
+                                <td>刘建英</td>
+                            </tr>
+                            <tr>
+                                <td>毕业院校 :</td>
+                                <td>吉林大学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" height="40" class="description">刘建英，全国工商联医药业商会会长...</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/article/cmd-fffff">[详细]</a>
+                                </td>
+                            </tr>
+                        </tbpdy>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="product-details product-details-bottom" style="margin-top: 20px;height: 458px;">
+            <div class="product-details-title">
+                <span class="title-left-bg"> > 热点专题</span>
+            </div>
+            <div class="topics">
+                <% var topics_arr = [{key:'news2.jpg',value:'xxxx'}]%>
+                <% topics_arr.forEach(function(item){%>
+                <a href="/article/cmd-<%= item.value%>">
+                    <div class="topics-item" style="background-image: url('/imgs/news/<%= item.key%>')"></div>
+                </a>
+                <%})%>
+            </div>
+        </div>
+    </div>
+</div>

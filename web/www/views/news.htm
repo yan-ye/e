@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--    <%var htmlTitle = $GET_META('Index','title');%>-->
+    <title><%= typeof title != 'undefined' ? title : 'index'%></title>
+    <%- include inc/tmp_meta.htm%>
+    <style>
+        .new-type-box {
+            border: 1px solid #e0dcdc;
+        }
+        .news-img-show {
+            width: 994px;
+            height: 172px;
+            overflow: hidden;
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border: 1px solid #d6d5d5;
+        }
+    /*    swiper-news-show  */
+        .swiper-news-show {
+            padding: 20px;
+            width: 932px;
+            overflow: hidden;
+        }
+        .swiper-news-show .box {
+
+        }
+        .news-img-show .title{
+            padding: 0 12px;
+            height: 30px;
+            line-height: 30px;
+            background: #fbfbfb;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .swiper-news-show .swiper-slide{
+            width: 200px;
+            height: 120px;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .swiper-news-show .swiper-slide a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+    <% var nav_type = 'byrs'%>
+    <%- include inc/nav.htm%>
+
+    <div class="culture">
+        <div class="left culture-list-wrap custom-bottom-type new-type-box" style="width: 491px">
+            <div class="culture-title">
+                <div class="left custom-title">党团建设</div>
+                <div class="right">更多>></div>
+            </div>
+            <div class="details">
+                <ul>
+                    <% var details_arr = [{key:'78家药企被认定国家企业技术中心',value:'xxxx'}]%>
+                    <% details_arr.forEach(function(item){%>
+                    <li class="custom-list-li"><a href="/article/cmd-78j"><%= item.key%></a></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <div class="left culture-list-wrap" style="width: 8px"></div>
+        <div class="left culture-list-wrap custom-bottom-type new-type-box" style="width: 491px">
+            <div class="culture-title">
+                <div class="left custom-title">市场创新</div>
+                <div class="right">更多>></div>
+            </div>
+            <div class="details">
+                <ul>
+                    <% var details_arr = [{key:'中西药复方制剂应用需谨慎 研究少安全性不明确',value:'xxxx'} ]%>
+                    <% details_arr.forEach(function(item){%>
+                    <li class="custom-list-li"><a href="/article/cmd-<%= item.value%>"><%= item.key%></a></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="news-img-show">
+        <div class="title">图片新闻</div>
+        <%var _img_arr = [
+        {img:'news1.jpg', value: 'news1.jpg'},{img:'news3.jpg', value: 'news3.jpg'},{img:'news3.jpg', value: 'news3.jpg'},{img:'news4.jpg', value: 'news4.jpg'}
+        ,{img:'news5.jpg', value: 'news5.jpg'},{img:'news6.jpg', value: 'news6.jpg'},{img:'news7.jpg', value: 'news7.jpg'}
+        ,{img:'news8.jpg', value: 'news8.jpg'},{img:'news9.jpg', value: 'news9.jpg'},{img:'news10.jpg', value: 'news10.jpg'}
+        ,{img:'news11.jpg', value: 'news11.jpg'},{img:'news12.jpg', value: 'news12.jpg'},{img:'news13.jpg', value: 'news13.jpg'}
+        ,{img:'news14.jpg', value: 'news14.jpg'},{img:'news15.jpg', value: 'news15.jpg'},{img:'news16.jpg', value: 'news16.jpg'}
+        ,{img:'news18.jpg', value: 'news18.jpg'},{img:'news19.jpg', value: 'news19.jpg'},{img:'news20.jpg', value: 'news20.jpg'}
+        ,{img:'news21.jpg', value: 'news21.jpg'},{img:'news22.jpg', value: 'news22.jpg'},{img:'news23.jpg', value: 'news23.jpg'}
+        ]%>
+        <!-- Swiper -->
+
+        <div class="swiper-news-show">
+            <div class="swiper-wrapper">
+                <% _img_arr.forEach(function(item){%>
+                <div class="swiper-slide" style="background-image:url('/imgs/news/<%= item.img%>')"><a href="/article/cmd-<%= item.value%>"></a></div>
+                <%})%>
+            </div>
+        </div>
+    </div>
+    <div class="culture">
+        <div class="left culture-list-wrap custom-bottom-type new-type-box" style="width: 491px">
+            <div class="culture-title">
+                <div class="left custom-title">党团建设</div>
+                <div class="right">更多>></div>
+            </div>
+            <div class="details">
+                <ul>
+                    <% var details_arr = [{key:'78家药企被认定国家企业技术中心',value:'xxxx'}]%>
+                    <% details_arr.forEach(function(item){%>
+                    <li class="custom-list-li"><a href="/article/cmd-<%= item.value%>"><%= item.key%></a></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <div class="left culture-list-wrap" style="width: 8px"></div>
+        <div class="left culture-list-wrap custom-bottom-type new-type-box" style="width: 491px">
+            <div class="culture-title">
+                <div class="left custom-title">市场创新</div>
+                <div class="right">更多>></div>
+            </div>
+            <div class="details">
+                <ul>
+                    <% var details_arr = [{key:'中西药复方制剂应用需谨慎 研究少安全性不明确',value:'xxxx'} ]%>
+                    <% details_arr.forEach(function(item){%>
+                    <li class="custom-list-li"><a href="/article/cmd-<%= item.value%>"><%= item.key%></a></li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    <%- include inc/footer.htm%>
+</div>
+</body>
+<%- include inc/mustjs.htm%>
+<script>
+    $$.initSwiper();
+    var swiper = new Swiper('.swiper-news-show', {
+        slidesPerView: 4,
+        spaceBetween: 25,
+        autoplay: {
+            delay: 1000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        },
+
+        loop: true, // 循环模式选项
+    });
+</script>
+</html>

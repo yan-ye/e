@@ -1,6 +1,7 @@
 $CONFIG.db = {
     mongodb: {
-        uri: 'mongodb://localhost/test'
+        // uri: 'mongodb://localhost/test'
+        uri: 'mongodb://47.94.206.255:27017/test'
     }
 };
 $CONFIG.web_login_auth = {

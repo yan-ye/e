@@ -1,0 +1,149 @@
+<div class="product-box">
+    <div class="product-list-wrap left custom-bottom-type" style="width: 322px">
+        <div class="product-details product-left-1-slidemove">
+            <div class="swiper-container" style="height: 100%">
+                <div class="swiper-wrapper">
+                    <%var img_arr = [{img:'news4.jpg',value:'a'}, {img:'news13.jpg',value:'b'}, {img:'news23.jpg',value:'b'}]%>
+                    <%img_arr.forEach(function(item){%>
+                    <div class="swiper-slide">
+                        <a href="/article/cmd-<%= item.value%>">
+                            <img src="/imgs/news/<%= item.img%>" alt="banner" width="316" height="310" alt="<%= item%>" style="margin-left: 2px; margin-top: 2px">
+                        </a>
+                    </div>
+                    <%})%>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="product-details product-details-bottom" style="margin-top: 20px">
+            <div class="product-details-title">
+                <span class="title-left-bg">产品展示</span>
+                <span class="right title-right">
+                        <a href="javascript:void(0);">更多>></a>
+                    </span>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper-container1">
+                <div class="swiper-wrapper">
+                    <%var _img_arr = [
+                    {img:'news1.jpg', value: 'news1.jpg'},{img:'news3.jpg', value: 'news3.jpg'},{img:'news3.jpg', value: 'news3.jpg'},{img:'news4.jpg', value: 'news4.jpg'}
+                    ,{img:'news5.jpg', value: 'news5.jpg'},{img:'news6.jpg', value: 'news6.jpg'},{img:'news7.jpg', value: 'news7.jpg'}
+                    ,{img:'news8.jpg', value: 'news8.jpg'},{img:'news9.jpg', value: 'news9.jpg'},{img:'news10.jpg', value: 'news10.jpg'}
+                    ,{img:'news11.jpg', value: 'news11.jpg'},{img:'news12.jpg', value: 'news12.jpg'},{img:'news13.jpg', value: 'news13.jpg'}
+                    ,{img:'news14.jpg', value: 'news14.jpg'},{img:'news15.jpg', value: 'news15.jpg'},{img:'news16.jpg', value: 'news16.jpg'}
+                    ,{img:'news18.jpg', value: 'news18.jpg'},{img:'news19.jpg', value: 'news19.jpg'},{img:'news20.jpg', value: 'news20.jpg'}
+                    ,{img:'news21.jpg', value: 'news21.jpg'},{img:'news22.jpg', value: 'news22.jpg'},{img:'news23.jpg', value: 'news23.jpg'}
+                    ]%>
+                    <% var img_arr = $$.__.chunk(_img_arr,2)%>
+                    <%img_arr.forEach(function(item){%>
+                    <div class="swiper-slide">
+                        <ul class="product-ul">
+                            <% item.forEach(function(lists){%>
+                            <li class="left">
+                                <a href="/article/cmd-<%= lists.value%>"><span class="product-list-img" style="background-image: url('/imgs/news/<%= lists.img%>')"></span></a>
+                                <p class="list-title"><a href="javascript:void (0);"><%= lists.title%></a></p>
+                            </li>
+                            <%})%>
+                        </ul>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-list-wrap left" style="width: 8px"></div>
+    <div class="product-list-wrap left custom-bottom-type" style="width: 389px">
+        <div class="product-details">
+            <div class="product-details-title">
+                <span class="title-left-bg" style="background-color: darkred">最新热点</span>
+                <span class="right title-right">
+                        <a href="javascript:void(0);">更多>></a>
+                    </span>
+            </div>
+            <div class="headline">
+                <%var headline_arr = [{key:'见义勇为余维业',value: 'xxx',description:'颁发“庆祝中华人民共和国成立70周年”纪念章是新中国成立70周年系列庆祝活动的重要组成部分，受此激励，修xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'}]%>
+                <% headline_arr.forEach(function(item){%>
+                <div class="headline-list">
+                    <a class="headline-list-title" href="/article/cmd-<%= item.value%>"><%= item.key%></a>
+                    <p class="headline-list-content">
+                        <a href="/article/cmd-<%= item.value%>"><%= item.description%></a>
+                    </p>
+                </div>
+                <%})%>
+            </div>
+        </div>
+        <div class="product-details product-details-bottom" style="margin-top: 20px">
+            <div class="product-details-title">
+                <span class="title-left-bg">科技研发</span>
+                <span class="right title-right">
+                        <a href="javascript:void(0);">更多>></a>
+                    </span>
+            </div>
+            <div class="kjyf-list ">
+                <% var kjyf_arr = [{key:'中西药复方制剂应用需谨慎 研究少安全性不明确',value:'xxxx'} ]%>
+                <ul>
+                    <%kjyf_arr.forEach(function(item){%>
+                    <li class="custom-list-li">
+                        <a href="/article/cmd-<%= item.value%>"><%= item.key%></a>
+                    </li>
+                    <%})%>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="product-list-wrap left" style="width: 9px"></div>
+    <div class="product-list-wrap left custom-bottom-type" style="width: 272px">
+        <div class="product-details" style="height: 198px;">
+            <div class="product-details-title">
+                <span class="title-left-bg">领航修正</span>
+            </div>
+            <div class="lhjt">
+                <div class="left lhjt-left">
+                    <a href="/article/cmd-aaa">
+                        <img width="102" height="150" border="0" src="/imgs/news/news6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="left lhjt-right">
+                    <table>
+                        <tbpdy>
+                            <tr>
+                                <td> 中 文 名 :</td>
+                                <td>刘建英</td>
+                            </tr>
+                            <tr>
+                                <td>毕业院校 :</td>
+                                <td>吉林大学</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" height="40" class="description">刘建英，全国工商联医药业商会会长...</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="/article/cmd-fffff">[详细]</a>
+                                </td>
+                            </tr>
+                        </tbpdy>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="product-details product-details-bottom" style="margin-top: 20px;height: 458px;">
+            <div class="product-details-title">
+                <span class="title-left-bg"> > 热点专题</span>
+            </div>
+            <div class="topics">
+                <% var topics_arr = [{key:'news2.jpg',value:'xxxx'}]%>
+                <% topics_arr.forEach(function(item){%>
+                <a href="/article/cmd-<%= item.value%>">
+                    <div class="topics-item" style="background-image: url('/imgs/news/<%= item.key%>')"></div>
+                </a>
+                <%})%>
+            </div>
+        </div>
+    </div>
+</div>

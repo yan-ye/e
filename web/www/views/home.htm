@@ -1,17 +1,31 @@
 <!doctype html>
 <html lang="en">
-<head><%var htmlTitle = $GET_META('Index','title');%>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= htmlTitle%></title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
+<head>
+<!--    <%var htmlTitle = $GET_META('Index','title');%>-->
+    <title><%= typeof title != 'undefined' ? title : 'index'%></title>
+    <%- include inc/tmp_meta.htm%>
 </head>
-<body>
-<%- include inc/nav.htm%>
+
+<div class="layout">
+    <%- include inc/nav.htm%>
+    <%- include inc/base_info.htm%>
+    <%- include inc/culture_info.htm%>
+    <%- include inc/footer.htm%>
+</div>
 </body>
-<script src="/js/jquery-3.3.1.slim.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
+<%- include inc/mustjs.htm%>
 </html>
+<script>
+    $$.initSwiper();
+    var swiper = new Swiper('.swiper-container1', {
+        direction: 'vertical',
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2000,
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        },
+        loop: true, // 循环模式选项
+    });
+</script>
